@@ -4,12 +4,19 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using log.web.host.Models;
+using Log.Web.Host.Models;
+using Microsoft.Extensions.Logging;
 
-namespace log.web.host.Controllers
+namespace Log.Web.Host.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ILogger logger;
+        public HomeController(ILogger<HomeController> logger)
+        {
+            this.logger = logger;
+        }
+
         public IActionResult Index()
         {
             return View();

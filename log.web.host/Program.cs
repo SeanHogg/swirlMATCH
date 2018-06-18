@@ -7,8 +7,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Log.Web.Client;
 
-namespace log.web.host
+namespace Log.Web.Host
 {
     public class Program
     {
@@ -19,6 +20,13 @@ namespace log.web.host
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
+            .ConfigureLogging((hostingContext, logging) =>
+            {
+                logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                logging.AddLogServiceClient();
+                logging.AddConsole();
+                logging.AddDebug();
+            })
                 .UseStartup<Startup>();
     }
 }

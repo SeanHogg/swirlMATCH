@@ -14,17 +14,6 @@ namespace Log.Web.Service.Application
     public class LogMessageHandler : ILogMessageHandler
     {
         public LogMessageHandler() { }
-        //        private static LogMessageHandler instance = null;
-
-        // public static LogMessageHandler CreateInstance()
-        // {
-        //     return instance;
-        // }
-        // static LogMessageHandler()
-        // {
-        //     if (instance == null)
-        //         instance = new LogMessageHandler();
-        // }
 
         public virtual void LogMessage(Message e)
         {

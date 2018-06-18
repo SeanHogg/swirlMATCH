@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Log.Web.Service.Application;
 using Microsoft.AspNetCore.Mvc;
 
-namespace log.web.service.Controllers
+namespace Log.Web.Service.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

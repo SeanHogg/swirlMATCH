@@ -1,6 +1,6 @@
 using System;
 
-namespace log.web.host.Models
+namespace Log.Web.Host.Models
 {
     public class ErrorViewModel
     {
