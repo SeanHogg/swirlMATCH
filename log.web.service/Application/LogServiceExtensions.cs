@@ -10,8 +10,8 @@ namespace Log.Web.Service.Application
         var handler = services.GetService<ILogMessageHandler>();
         NLogManager manager = new  NLogManager();
         SerilogManager sManager = new   SerilogManager();
-        handler.LogMessageRecieved += sManager.LogMessage;
-        handler.LogMessageRecieved += manager.LogMessage;
+        handler.LogItemReceived += sManager.Log;
+        handler.LogItemReceived += manager.Log;
     }
 }
 }

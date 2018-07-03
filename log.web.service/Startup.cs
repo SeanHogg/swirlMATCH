@@ -27,6 +27,7 @@ namespace Log.Web.Service
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddApiVersioning();
             services.AddSingleton<ILogMessageHandler>(new LogMessageHandler());
             services.AddSingleton<ICustomLogManager>(new SerilogManager());
             services.AddSingleton<ICustomLogManager>(new NLogManager());

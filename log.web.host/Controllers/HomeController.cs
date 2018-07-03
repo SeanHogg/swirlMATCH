@@ -19,6 +19,7 @@ namespace Log.Web.Host.Controllers
 
         public IActionResult Index()
         {
+            logger.LogInformation("Hello");
             return View();
         }
 

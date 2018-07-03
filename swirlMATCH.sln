@@ -9,15 +9,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Web.Host", "log.web.hos
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Log.Web.Service", "log.web.service\Log.Web.Service.csproj", "{C0978454-D04C-427C-AB03-931D39DA4A30}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "swirlmatch.application", "swirlmatch.application\swirlmatch.application.csproj", "{8EDC6F72-80F3-438E-A455-BA2476D5592B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swirlmatch.Application", "swirlmatch.application\Swirlmatch.Application.csproj", "{8EDC6F72-80F3-438E-A455-BA2476D5592B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logging", "Logging", "{DA3AAA04-4318-4657-8532-992B414864D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "swirlmatch.domain", "swirlmatch.domain\swirlmatch.domain.csproj", "{ED25D796-ED60-4D50-B76B-38914C3011B5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swirlmatch.Domain", "swirlmatch.domain\Swirlmatch.Domain.csproj", "{ED25D796-ED60-4D50-B76B-38914C3011B5}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "swirlmatch.infrastructure", "swirlmatch.infrastructure\swirlmatch.infrastructure.csproj", "{95516E20-0A04-413C-83E6-BA1638B040B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swirlmatch.Infrastructure", "swirlmatch.infrastructure\Swirlmatch.Infrastructure.csproj", "{95516E20-0A04-413C-83E6-BA1638B040B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "swirlmatch.web.services", "swirlmatch.web.services\swirlmatch.web.services.csproj", "{CB7459C0-8EB9-46C2-BF5C-B38576098CF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Swirlmatch.Web.Services", "swirlmatch.web.services\Swirlmatch.Web.Services.csproj", "{CB7459C0-8EB9-46C2-BF5C-B38576098CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Log.Web.Contracts", "Log.Web.Contracts\Log.Web.Contracts.csproj", "{B585D860-425A-42AA-BA81-737F855E7E79}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,18 @@ Global
 		{CB7459C0-8EB9-46C2-BF5C-B38576098CF0}.Release|x64.Build.0 = Release|Any CPU
 		{CB7459C0-8EB9-46C2-BF5C-B38576098CF0}.Release|x86.ActiveCfg = Release|Any CPU
 		{CB7459C0-8EB9-46C2-BF5C-B38576098CF0}.Release|x86.Build.0 = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|x64.Build.0 = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Debug|x86.Build.0 = Debug|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|x64.ActiveCfg = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|x64.Build.0 = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|x86.ActiveCfg = Release|Any CPU
+		{B585D860-425A-42AA-BA81-737F855E7E79}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -121,6 +135,7 @@ Global
 		{C4843361-EC2D-486A-A05D-79975B600878} = {DA3AAA04-4318-4657-8532-992B414864D9}
 		{9A72D9C7-2817-4D2B-B9C8-A4BB901C5C10} = {DA3AAA04-4318-4657-8532-992B414864D9}
 		{C0978454-D04C-427C-AB03-931D39DA4A30} = {DA3AAA04-4318-4657-8532-992B414864D9}
+		{B585D860-425A-42AA-BA81-737F855E7E79} = {DA3AAA04-4318-4657-8532-992B414864D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1F8F295D-BA8A-49AE-9896-52FCF557B2DF}

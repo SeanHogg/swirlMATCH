@@ -1,29 +1,30 @@
 namespace Log.Web.Service.Application
 {
     using System;
+    using Log.Web.Contracts;
     using NLog.Targets;
     using Serilog.Events;
 
     public interface ILogMessageHandler
     {
-        void LogMessage(Message e);
+        void Log(LogRequest e);
 
-        event EventHandler<Message> LogMessageRecieved;
+        event EventHandler<LogRequest> LogItemReceived;
     }
 
     public class LogMessageHandler : ILogMessageHandler
     {
         public LogMessageHandler() { }
 
-        public virtual void LogMessage(Message e)
+        public virtual void Log(LogRequest e)
         {
 
-            if (LogMessageRecieved != null)
+            if (LogItemReceived != null)
             {
-                LogMessageRecieved(this, e);
+                LogItemReceived(this, e);
             }
         }
 
-        public event EventHandler<Message> LogMessageRecieved;
+        public event EventHandler<LogRequest> LogItemReceived;
     }
 }

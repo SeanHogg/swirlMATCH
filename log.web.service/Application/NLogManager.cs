@@ -2,6 +2,7 @@ namespace Log.Web.Service.Application
 {
     using System;
     using System.Collections.Concurrent;
+    using Log.Web.Contracts;
     using NLog;
     using NLog.Config;
     using NLog.Targets;
@@ -15,10 +16,17 @@ namespace Log.Web.Service.Application
             this._loggers = new ConcurrentDictionary<string, Logger>();
         }
 
-        public override void LogMessage(Object sender, Message message)
+        public override void Log(object sender, LogRequest message)
         {
+            var logLevel = LogLevel.Info;
             var logger = Initialize(message.TenantId);
-            logger.Log(LogLevel.Info, message);
+            switch (message.Level)
+            {
+                case Microsoft.Extensions.Logging.LogLevel.Critical:
+                    logLevel = LogLevel.Fatal;
+                    break;
+            }
+            logger.Log(logLevel, message);
         }
 
         private Logger Initialize(string instanceName)
